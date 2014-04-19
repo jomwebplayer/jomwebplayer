@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0.0" method="upgrade">
+  <name>Jom Webplayer</name>
+  <author>Jom Webplayer</author>
+  <creationDate>October 2012</creationDate>
+  <copyright>Copyright (c) 2012 - 2014 Jom Webplayer. All rights reserved.</copyright>
+  <authorEmail>admin@jomwebplayer.com</authorEmail>
+  <authorUrl>www.jomwebplayer.com</authorUrl>
+  <version>3.1.0</version>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <description>&lt;h3 style=&quot;margin:0px 5px; padding:0px;&quot;&gt;Jom Webplayer - A Joomla! Video Player Extension&lt;/h3&gt;</description>
+  <installfile>install.jomwebplayer.php</installfile>
+  <uninstallfile>uninstall.jomwebplayer.php</uninstallfile>
+  <scriptfile>script.jomwebplayer.php</scriptfile>
+  <install>
+    <sql>
+      <file charset="utf8" driver="mysql">install.sql</file>
+      <file driver="mysql">install.mysql4.sql</file>
+      <file charset="utf8" driver="mysqli">install.sql</file>
+      <file driver="mysqli">install.mysql4.sql</file>
+    </sql>
+  </install>
+  <uninstall>
+    <sql>
+      <file charset="utf8" driver="mysql">uninstall.sql</file>
+      <file driver="mysql">uninstall.sql</file>
+      <file charset="utf8" driver="mysqli">uninstall.sql</file>
+      <file driver="mysqli">uninstall.sql</file>
+    </sql>
+  </uninstall>
+  <!-- user part -->
+  <files folder="components/com_jomwebplayer">
+    <folder>assets</folder>
+    <folder>css</folder>
+    <folder>js</folder>
+    <folder>models</folder>
+    <folder>views</folder>
+    <filename>controller.php</filename>
+    <filename>index.html</filename>
+    <filename>player.swf</filename>
+    <filename>router.php</filename>
+    <filename>jomwebplayer.php</filename>
+  </files>
+  <!-- administration part -->
+  <administration>
+    <menu img="components/com_jomwebplayer/assets/jomwebplayer.png" view="settings">COM_JOMWEBPLAYER</menu>
+    <files folder="administrator/components/com_jomwebplayer">
+      <folder>assets</folder>
+      <folder>css</folder>
+      <folder>controllers</folder>
+      <folder>elements</folder>
+      <folder>libs</folder>
+      <folder>models</folder>
+      <folder>tables</folder>
+      <folder>views</folder>
+      <filename>jomwebplayer.php</filename>
+      <filename>index.html</filename>
+      <filename>install.mysql4.sql</filename>
+      <filename>install.sql</filename>
+      <filename>uninstall.sql</filename>
+    </files>
+    <languages folder="administrator/language">
+      <language tag="en-GB">en-GB/en-GB.com_jomwebplayer.ini</language>
+      <language tag="en-GB">en-GB/en-GB.com_jomwebplayer.menu.ini</language>
+      <language tag="en-GB">en-GB/en-GB.com_jomwebplayer.sys.ini</language>
+    </languages>
+  </administration>
+  <modules>
+    <module module="mod_jomwebplayer" client="site" />
+    <module module="mod_jomwebplayergallery" client="site" />
+    <module module="mod_jomwebplayersearch" client="site" />
+    <module module="mod_jomwebplayerupload" client="site" />
+  </modules>
+  <plugins>
+    <plugin plugin="jomwebplayer" group="content" />
+  </plugins>
+</extension>

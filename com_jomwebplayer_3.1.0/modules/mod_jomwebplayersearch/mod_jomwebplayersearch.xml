@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0" client="site" method="upgrade">
+  <name>Jom Webplayer - Search</name>
+  <author>Jom Webplayer</author>
+  <creationDate>October 2012</creationDate>
+  <copyright>Copyright (c) 2012 - 2014 Jom Webplayer. All rights reserved.</copyright>
+  <authorEmail>admin@jomwebplayer.com</authorEmail>
+  <authorUrl>www.jomwebplayer.com</authorUrl>
+  <version>3.1.0</version>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <description>A Search module for Jom Webplayer Videos.</description>
+  <files>
+    <filename module="mod_jomwebplayersearch">mod_jomwebplayersearch.php</filename>
+    <filename>index.html</filename>
+  </files>
+  <params>
+    <param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="A Suffix to be applied to the CSS class of the Module.This allows for individual Module Styling." />
+  </params>
+  <config>
+    <fields name="params">
+      <fieldset name="basic">
+        <field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="A Suffix to be applied to the CSS class of the Module.This allows for individual Module Styling." />
+      </fieldset>
+    </fields>
+  </config>
+</install>
